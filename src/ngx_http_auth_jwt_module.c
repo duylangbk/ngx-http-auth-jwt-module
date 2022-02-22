@@ -490,7 +490,7 @@ ngx_http_auth_jwt_merge_loc_conf(ngx_conf_t *cf, void *parent, void *child)
 
 static char * getJwt(ngx_http_request_t *r, ngx_str_t auth_jwt_validation_type)
 {
-	static const ngx_str_t authorizationHeaderName = ngx_string("Authorization");
+	static const ngx_str_t authorizationHeaderName = ngx_string("X-Signature");
 	ngx_table_elt_t *authorizationHeader;
 	char* jwtCookieValChrPtr = NULL;
 	ngx_str_t jwtCookieVal;
